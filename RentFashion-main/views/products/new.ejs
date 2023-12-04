@@ -1,0 +1,225 @@
+<% layout('layouts/boilerplate') %>
+    <%- include('../partials/navbar') %>
+    <style>
+        .space
+        {
+            width: 100%;
+            height: 60px;
+            background: #fffbf2;
+        }
+        form{
+            background-color:  #fffbf2;
+            
+        }
+       br{
+        color: #fffbf2;
+       }
+    </style>
+        <div class="space"></div>
+        <div>
+             <form action="/products" class="max-auto row g-3 needs-validation" method="post" novalidate>
+                <div>
+                    <label for="name"> Name:</label>
+                    <input type="text" name="name" placeholder="Name of the product" required>
+                    <br>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a Productname.
+                    </div>
+                </div>
+                <div>
+                    <select name="type" type="text">
+                        <option value="">Choose categories</option>
+                        <option value="Women">Women</option>
+                        <option value="Men">Men</option>
+                        <option value="Footwear">Footwear</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a Productname.
+                    </div>
+                </div>
+                <div>
+                    <label for="image"> Image:</label>
+                    <input type="text" name="image" placeholder="Upload image of the product" required>
+
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a url.
+                    </div>
+                </div>
+                <div>
+                    <label for="price"> Price:</label>
+                    <input type="text" name="price" placeholder="Price of the product" required>
+                    <br>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a Product price.
+                    </div>
+                </div>
+                <div>
+                    <label for="Description">Desc:</label>
+                    <textarea name="desc" id=""
+                        rows="4"></textarea placeholder="Description of the product">
+                <br>
+        <button> Upload products</button>
+        </div>
+    </form> 
+ 
+
+
+
+
+
+
+         <!-- <form action="/products" class="max-auto row g-3 needs-validation" method="post" novalidate>
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">NAME:</label>
+                    <div class="col-sm-10">
+                        <input type="text"  name="name" id="inputEmail3" placeholder="Name of the product" style="background-color: white;border: 1px solid burlywood;"">
+                    </div>
+                    <br>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a Productname.
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="image" class="col-sm-2 col-form-label">IMAGE:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="image" class="form-control" id="inputPassword3" placeholder="Upload image of the product" style="background-color: white;border: 1px solid burlywood;"" >
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a url.
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <label for="price" class="col-sm-2 col-form-label">PRICE:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="price" class="form-control" id="inputEmail3" placeholder="Price of the product" style="background-color: white; border: 1px solid burlywood;">
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a Product price.
+                    </div>
+                </div>
+                <div>
+                    <select name="type" type="text">
+                        <option value="">Choose categories</option>
+                        <option value="Women">Women</option>
+                        <option value="Men">Men</option>
+                        <option value="Footwear">Footwear</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a Productname.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Description">DESCRIPTION</label>
+                    <textarea  name="desc" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Description of the product" style="border: 1px solid burlywood;""></textarea>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">CHOOSE CATEGORIES:</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    WOMEN SECTION
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    MEN SECTION
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                    value="option3">
+                                <label class="form-check-label" for="gridRadios3">
+                                    ACCESSORIES
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4"
+                                    value="option4">
+                                <label class="form-check-label" for="gridRadios4">
+                                    FOOTWEAR
+                                </label>
+                            </div>
+                            <br><br>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">DESCRIPTION</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    placeholder="Description of the product" style="border: 1px solid burlywood;""></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a Productname.
+                    </div>
+                </fieldset> 
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary" style="background-color: brown;">UPLOAD
+                            PRODUCTS</button>
+                    </div>
+                </div>
+            </form> -->
+ 
+
+        </div>
+        <script>
+            (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+        </script>
+        <%- include('../partials/footer') %>
+            </body>
+
+            </html>

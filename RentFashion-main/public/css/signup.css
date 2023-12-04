@@ -1,0 +1,57 @@
+/*Start Register Style*/
+
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    height:auto;
+}
+.register{
+    float: right;
+    background-color: #fffbf2;
+    height: 100%;
+    color:black;
+    text-align: center;
+  
+}
+.register h2{
+    margin: 30px 0;
+    font-size: 50px;
+    letter-spacing: 3px
+}
+.register p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.register button{
+    background-color: transparent;
+    border: 1px solid #FFF;
+   
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition:0.2s all  ease-in-out;
+}
+.register button:hover{
+    color: #e04e1c;
+    background-color: #fff;
+    cursor: pointer;
+}
+.container button{
+    width: 100%;
+    margin: 30px 0;
+    padding: 10px;
+    border: none;
+    background-color: #e04e1c;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.container button:hover{
+    width:97%;
+    font-size: 22px;
+    border-radius: 5px;
+    
+}
