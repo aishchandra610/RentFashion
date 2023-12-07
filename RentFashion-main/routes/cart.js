@@ -19,4 +19,22 @@ router.post('/user/:productId/add',isLoggedIn,async(req,res)=>{
     user.save();
     res.redirect('/user/cart')
 })
+
+router.delete('/user/:productId', isLoggedIn, async (req, res) => {
+    try {
+        const { productId } = req.params;
+        const userId = req.user._id;
+        console.log(productId+" "+userId);
+        // Remove the product from the user's cart
+        await Register.findByIdAndUpdate(userId, { $pull: { cart: productId } });
+
+        res.redirect('/user/cart');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+
+
 module.exports=router;

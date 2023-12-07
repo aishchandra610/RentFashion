@@ -15,7 +15,7 @@
         color: #fffbf2;
        }
     </style>
-        <div class="space"></div>
+        <!-- <div class="space"></div>
         <div>
              <form action="/products" class="max-auto row g-3 needs-validation" method="post" novalidate>
                 <div>
@@ -74,73 +74,85 @@
         <button> Upload products</button>
         </div>
     </form> 
- 
+    </div> 
+      -->
+  
 
 
 
 
 
 
-         <!-- <form action="/products" class="max-auto row g-3 needs-validation" method="post" novalidate>
+         <form action="/products" class=" needs-validation" method="post" novalidate style="padding:30px;">
+            <div>
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">NAME:</label>
                     <div class="col-sm-10">
-                        <input type="text"  name="name" id="inputEmail3" placeholder="Name of the product" style="background-color: white;border: 1px solid burlywood;"">
+                        <input type="text"  name="name" id="inputEmail3" placeholder="Name of the product" style="background-color: white;border: 1px solid burlywood;">
+                        
                     </div>
-                    <br>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                     <div class="invalid-feedback">
                         Please choose a Productname.
                     </div>
+                    <br>
+                    
                 </div>
+            </div>
+                
                 <div class="form-group row">
                     <label for="image" class="col-sm-2 col-form-label">IMAGE:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="image" class="form-control" id="inputPassword3" placeholder="Upload image of the product" style="background-color: white;border: 1px solid burlywood;"" >
+                        <input type="text" name="image" class="form-control" placeholder="Upload image of the product" style="background-color: white;border: 1px solid burlywood;" >
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter a url.
+                        </div>
                     </div>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Please enter a url.
-                    </div>
+                    
 
                 </div>
                 <div class="form-group row">
                     <label for="price" class="col-sm-2 col-form-label">PRICE:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="price" class="form-control" id="inputEmail3" placeholder="Price of the product" style="background-color: white; border: 1px solid burlywood;">
+                        <input type="text" name="price" class="form-control"  placeholder="Price of the product" style="background-color: white; border: 1px solid burlywood;">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please choose a Product price.
+                        </div>
                     </div>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Please choose a Product price.
-                    </div>
+                   
                 </div>
                 <div>
+                    <label  class="col-sm-2 col-form-label">PRICE:</label>
                     <select name="type" type="text">
+
                         <option value="">Choose categories</option>
                         <option value="Women">Women</option>
                         <option value="Men">Men</option>
                         <option value="Footwear">Footwear</option>
                         <option value="Accessories">Accessories</option>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please choose a Productname.
+                        </div>
                     </select>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Please choose a Productname.
-                    </div>
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-group" >
                     <label for="Description">DESCRIPTION</label>
-                    <textarea  name="desc" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    <textarea  name="desc" class="form-control" rows="3"
                         placeholder="Description of the product" style="border: 1px solid burlywood;""></textarea>
                 </div>
-                <fieldset class="form-group">
+                <!-- <fieldset class="form-group">
                     <div class="row">
                         <legend class="col-form-label col-sm-2 pt-0">CHOOSE CATEGORIES:</legend>
                         <div class="col-sm-10">
@@ -187,14 +199,14 @@
                     <div class="invalid-feedback">
                         Please choose a Productname.
                     </div>
-                </fieldset> 
+                </fieldset>  -->
                 <div class="form-group row">
                     <div class="col-sm-10">
                         <button type="submit" class="btn btn-primary" style="background-color: brown;">UPLOAD
                             PRODUCTS</button>
                     </div>
                 </div>
-            </form> -->
+            </form>  
  
 
         </div>

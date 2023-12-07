@@ -12,29 +12,10 @@
         }
     </style>
 <body style="background-color: #fffbf2;">
-    <h5 style="padding: 5px;margin-top: 5px;">Home/Accessories</h5>
-    <!-- <%for(let item of result){%>
-        <ul>
-            <h1><%=item.type%></h1>
-            <h1><%=item.name%></h1>
-            <img src="<%=item.image%>" alt="">
-            <h3>₹ <%=item.price%></h3>
-            <div><%=item.desc%></div>
-            <a href="/products/<%=item._id%>">View Product</a>
-            <%if(currentUser && currentUser.role==='seller' ){%>
-            <form action="/products/<%=item._id%>?_method=delete" method="post">
-            <button>Delete</button>
-            <%}%>
-            </form>
-        </ul> -->
-
-
-
-
-
-
+    <h2 style="padding: 5px;margin-top: 5px;">Home/Accessories</h2>
         <div class="row" style="display: flex;width: 100%; padding: 40px;">
             <%for(let item of result){%>
+
                 <div class="card" style="width: 18rem; border: 1px solid #faf1dd ;margin:10px; padding: 10px;">
                     <img class="card-img-top" src="<%=item.image%>" alt="Card image cap"
                         style="width: 267px; height: 267px; border-radius: 5px;">
@@ -51,20 +32,16 @@
                     <div class="card-body">
                         <button type="button" class="btn btn-outline-dark"> <a href="/products/<%=item._id%>"
                                 style="text-decoration: none;">View Product</a></button>
-                    </div>
+                    </div> 
                     <%if(currentUser && currentUser.role==='seller' ){%>
                         <form action="/products/<%=item._id%>?_method=delete" method="post">
                             <button>Delete</button>
                             </form>
-                            <%}%>
-                           
+                    <%}%>
                 </div>
-                
                 <%}%>
-            
         </div>
 
         <br>  
-    <%}%>
     <%- include('../partials/footer') %>
 </body>

@@ -4,8 +4,10 @@
 <div>
     <form action="/products/<%=foundProduct._id%>?_method=patch" class="max-auto needs-validation" method="post"  novalidate>
         <div>
+            <div>
         <label for="name"> Name:</label>
             <input type="text" name="name" placeholder="Name of the product" value="<%=foundProduct.name%>" required>
+        </div>
 <br>    
         <div class="valid-feedback">
         Looks good!
@@ -15,24 +17,30 @@
         </div> 
         </div>
         <div>
-            <select name="type" type="text" >
-                <option value="">Choose categories</option>
-                <option value="Women">Women</option>
-                <option value="Men">Men</option>
-                <option value="Footwear">Footwear</option>
-                <option value="Accessories">Accessories</option>
-            </select>
-            <div class="valid-feedback">
-                Looks good!
+            <div>
+                <select name="type" type="text" >
+                    <option value="">Choose categories</option>
+                    <option value="Women">Women</option>
+                    <option value="Men">Men</option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Accessories">Accessories</option>
+                </select>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please choose a Productname.
+                </div>
             </div>
-            <div class="invalid-feedback">
-                Please choose a Productname.
-            </div>
+            <div>
         </div>
+        
         <div>
-        <label for="image"> Image:</label>
+            <label for="image"> Image:</label>
             <input type="text" name="image" placeholder="Upload image of the product" value="<%=foundProduct.image%>" required>
         <br>
+        </div>
+        
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -41,10 +49,15 @@
         </div>
         </div>
 
+
         <div>
-        <label for="price"> Price:</label>
+            <label for="price"> Price:</label>
             <input type="text" name="price" placeholder="Price of the product" value="<%=foundProduct.price%>" required> 
         <br>
+        </div>
+
+        <div>
+        
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -53,9 +66,15 @@
         </div>
         </div>
         <div>
-        <label for="Description">Desc:</label>
-            <textarea name="desc" id=""  rows="4"></textarea placeholder="Description of the product" value="<%=foundProduct.desc%>">
-                <br>
+
+
+
+            <div>
+                <label for="Description">Desc:</label>
+                <textarea name="desc" id=""  rows="4"></textarea placeholder="Description of the product" value="<%=foundProduct.desc%>" required>
+                    <br>
+            </div>
+        
                 <div class="valid-feedback">
                     Looks good!
                 </div>

@@ -160,5 +160,17 @@ router.delete('/products/:id',isLoggedIn,isProductAuthor,async(req,res)=>{
         res.status(500).render('error', { error: err });
     }
 });
+router.get('/product/payment',isLoggedIn,async(req,res)=>{
+    try{
+    let {id}=req.params;
+    let foundProduct=await Product.findById(id);
+    res.render('products/payment');
+    }
+    catch(err)
+    {
+        console.log(err);
+        res.status(500).render('products/error', { error: err });;
+    }
+});
 
 module.exports=router; 

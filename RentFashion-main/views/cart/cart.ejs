@@ -42,7 +42,11 @@
                 <div>
                     <li style="justify-content: center;"><%=item.name%></li>
                     <li style="justify-content: center;"><%=item.price%></li>
-                    <div class="cart-btn">BUY</div>
+                    <div class="cart-btn"><a href="/product/payment">BUY</a> </div>
+                    <form class="d-inline-block" action="/user/<%=item._id%>?_method=delete" method="post">
+                      <button class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+        
                 </div>
                
             </div>

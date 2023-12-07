@@ -1,0 +1,41 @@
+.detail-section
+{
+    display: flex;
+   padding: 30px;
+}
+.detail-section-img img{
+    width:35rem;
+    height:35rem;
+}
+
+.detail-section-text
+{
+    padding: 30px;
+}
+.rating-record
+{
+    padding:10px;
+}
+.comment-view-main
+{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    padding: 10px;
+    /* border-radius: 5px; */
+}
+.comment-view
+{
+    border: 1px solid #c7bdaa;
+    padding: 10px;
+    border-radius: 10px;
+}
+.comment
+{
+    /* border: 1px solid #c7bdaa; */
+    /* border: 1px solid white; */
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    /* background-color: #d6c29d; */
+}
